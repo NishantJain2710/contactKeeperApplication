@@ -2,11 +2,11 @@ import pg from 'pg'
 const Pool = pg.Pool;
 
 const pool = new Pool({
-    user:"postgres",
-    password:"1234",
-    host:"localhost",
-    port: 5432,
-    database: "contactkeeperapp"
+    user:process.env.USER,
+    password:process.env.PASSWORD,
+    host:process.env.HOST,
+    port:process.env.DBPORT,
+    database: process.env.PGDATABASE
 })
 
 export default pool;
